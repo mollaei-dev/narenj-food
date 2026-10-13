@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("@/assets/fonts/Vazirmatn-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("@/assets/fonts/Vazirmatn-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("@/assets/fonts/Vazirmatn-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("@/assets/fonts/Vazirmatn-Bold.ttf");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Vazirmatn";
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}

@@ -3,9 +3,9 @@ import Header from "@/components/Header";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#090707ed] text-[#F5F1EB]">
+    <div className="min-h-screen px-24">
       <Header />
-      <main>
+      <main className="mt-20">
         <HomePage />
       </main>
     </div>

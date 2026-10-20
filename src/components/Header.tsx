@@ -1,4 +1,5 @@
 import logo from "@/assets/icons/logo.jpg";
+import MainNavigation from "./MainNavigation";
 
 function Header() {
   return (
@@ -9,22 +10,7 @@ function Header() {
           src={logo}
           alt="لوگوی نارنج"
         />
-        <nav>
-          <ul className="hidden gap-4 text-[18px] md:flex">
-            <li>
-              <a href="#">صفحه اصلی</a>
-            </li>
-            <li>
-              <a href="#">منو</a>
-            </li>
-            <li>
-              <a href="#">درباره نارنج</a>
-            </li>
-            <li>
-              <a href="#">تماس با ما</a>
-            </li>
-          </ul>
-        </nav>
+        <MainNavigation />
         <div className="flex gap-4">
           <button className="flex h-8 w-20 cursor-pointer items-center justify-center rounded-lg bg-[#FF6D00] md:h-10">
             ثبت نام

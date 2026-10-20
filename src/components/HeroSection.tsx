@@ -17,13 +17,13 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="flex items-center gap-12 px-0 py-10">
-      <div className="flex w-1/2 flex-col items-center gap-7 text-center">
-        <h1 className="text-5xl font-bold text-[#FF6A00]">
+    <section className="flex gap-12 flex-col-reverse min-[870px]:flex-row min-[870px]:gap-1 items-center px-0 py-10">
+      <div className="flex w-full md:w-1/2 flex-col items-center gap-7 text-center">
+        <h1 className="text-3xl min-[520px]:text-4xl xl:text-5xl  font-bold text-[#FF6A00]">
           مجموعه غذایی نارنج
         </h1>
 
-        <p className="text-xl leading-9 text-[#F5F1EB]">
+        <p className="text- lg:text-lg xl:text-xl leading-9 text-[#F5F1EB]">
           از عطر غذاهای اصیل ایرانی و سنتی تا طعم‌های جذاب فست‌ فود
           <br />
           برای هر سلیقه، یک انتخاب خوشمزه !
@@ -40,14 +40,14 @@ function HeroSection() {
           ))}
         </div>
 
-        <button className="cursor-pointer rounded-xl bg-[#FF6A00] px-6 py-3 font-bold text-[#F5F1EB] shadow-lg shadow-[#FF6A00]/20 transition-all duration-300 hover:-translate-x-1 hover:bg-[#FF6A00]/70">
+        <button className="cursor-pointer rounded-xl bg-[#FF6A00]  px-4 py-2 sm:px-6 sm:py-3 font-bold text-[#F5F1EB] shadow-lg shadow-[#FF6A00]/20 transition-all duration-300 hover:-translate-x-1 hover:bg-[#FF6A00]/70">
           مشاهده منو ←
         </button>
       </div>
 
-      <div className="w-1/2">
+      <div className=" w-full  min-[870px]:w-1/2">
         <img
-          className="h-110 w-full rounded-[30px] object-cover"
+          className="h-80  w-full lg:h-110 rounded-[30px] object-cover"
           src={bannerImages[currentBanner]}
           alt="غذاهای مجموعه غذایی نارنج"
         />

@@ -66,7 +66,7 @@ function AboutSection() {
           شامل بسته‌بندی‌های مجلسی، تحویل سریع و امکان سفارشی‌سازی منو است.
         </p>
       </div>
-      <div className="relative w-full overflow-hidden rounded-r-full bg-[#ff6f009e] px-6 py-10 min-[375px]:pr-7 md:h-120 lg:w-1/2 xl:pr-10 2xl:h-140">
+      <div className="relative w-full overflow-hidden rounded-r-full bg-[#a94b02] px-6 py-10 min-[375px]:pr-7 md:h-120 lg:w-1/2 xl:pr-10 2xl:h-140">
         {circles.map((item, index) => (
           <span
             key={index}

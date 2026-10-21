@@ -1,4 +1,4 @@
-import restaurant from "@/assets/images/restaurant.jpg";
+import restaurant from "@/assets/images/about/restaurant.jpg";
 const circles = [
   { top: "4%", left: "18%", color: "bg-white", size: "size-1" },
   { top: "4%", left: "48%", color: "bg-black", size: "size-1" },

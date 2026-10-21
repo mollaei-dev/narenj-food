@@ -1,10 +1,10 @@
 import CategoryCard from "./CategoryCard";
-import iranianFood from "@/assets/images/iranian-food.jpg";
-import traditionalFood from "@/assets/images/traditional-food.jpg";
-import fastFood from "@/assets/images/fast-food.jpg";
-import drink from "@/assets/images/drink.jpg";
-import healthyFood from "@/assets/images/healthy-food.jpg";
-import dessert from "@/assets/images/dessert.jpg";
+import iranianFood from "@/assets/images/food-categories/iranian-food.jpg";
+import traditionalFood from "@/assets/images/food-categories/traditional-food.jpg";
+import fastFood from "@/assets/images/food-categories/fast-food.jpg";
+import drink from "@/assets/images/food-categories/drink.jpg";
+import healthyFood from "@/assets/images/food-categories/healthy-food.jpg";
+import dessert from "@/assets/images/food-categories/dessert.jpg";
 
 const categories = [
   {
@@ -46,7 +46,7 @@ function FoodCategories() {
       <h2 className="mb-10 w-45 border-r-4 border-[#FF6D00] py-2 pr-4 text-right text-2xl font-bold text-[#F5F1EB]">
         چی میل داری ؟
       </h2>
-      <div className="grid grid-cols-1 justify-items-center gap-4 min-[370px]:grid-cols-2 md:gap-4 min-[870px]:grid-cols-3 lg:gap-4 xl:gap-6 2xl:grid-cols-6">
+      <div className="grid grid-cols-1 justify-items-center gap-4 min-[370px]:grid-cols-2 min-[870px]:grid-cols-3 md:gap-4 lg:gap-4 xl:gap-6 2xl:grid-cols-6">
         {categories.map((category, index) => (
           <CategoryCard
             key={category.title}

@@ -1,6 +1,6 @@
-import banner1 from "@/assets/images/banner1.jpg";
-import banner2 from "@/assets/images/banner2.jpg";
-import banner3 from "@/assets/images/banner3.jpg";
+import banner1 from "@/assets/images/banners/banner1.jpg";
+import banner2 from "@/assets/images/banners/banner2.jpg";
+import banner3 from "@/assets/images/banners/banner3.jpg";
 import { useEffect, useState } from "react";
 
 const bannerImages = [banner1, banner2, banner3];
@@ -17,13 +17,13 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="flex gap-12 flex-col-reverse min-[870px]:flex-row min-[870px]:gap-1 items-center px-0 py-10">
-      <div className="flex w-full md:w-1/2 flex-col items-center gap-7 text-center">
-        <h1 className="text-3xl min-[520px]:text-4xl xl:text-5xl  font-bold text-[#FF6A00]">
+    <section className="flex flex-col-reverse items-center gap-12 px-0 py-10 min-[870px]:flex-row min-[870px]:gap-1">
+      <div className="flex w-full flex-col items-center gap-7 text-center md:w-1/2">
+        <h1 className="text-3xl font-bold text-[#FF6A00] min-[520px]:text-4xl xl:text-5xl">
           مجموعه غذایی نارنج
         </h1>
 
-        <p className="text- lg:text-lg xl:text-xl leading-9 text-[#F5F1EB]">
+        <p className="text- leading-9 text-[#F5F1EB] lg:text-lg xl:text-xl">
           از عطر غذاهای اصیل ایرانی و سنتی تا طعم‌های جذاب فست‌ فود
           <br />
           برای هر سلیقه، یک انتخاب خوشمزه !
@@ -40,14 +40,14 @@ function HeroSection() {
           ))}
         </div>
 
-        <button className="cursor-pointer rounded-xl bg-[#FF6A00]  px-4 py-2 sm:px-6 sm:py-3 font-bold text-[#F5F1EB] shadow-lg shadow-[#FF6A00]/20 transition-all duration-300 hover:-translate-x-1 hover:bg-[#FF6A00]/70">
+        <button className="cursor-pointer rounded-xl bg-[#FF6A00] px-4 py-2 font-bold text-[#F5F1EB] shadow-lg shadow-[#FF6A00]/20 transition-all duration-300 hover:-translate-x-1 hover:bg-[#FF6A00]/70 sm:px-6 sm:py-3">
           مشاهده منو ←
         </button>
       </div>
 
-      <div className=" w-full  min-[870px]:w-1/2">
+      <div className="w-full min-[870px]:w-1/2">
         <img
-          className="h-80  w-full lg:h-110 rounded-[30px] object-cover"
+          className="h-80 w-full rounded-[30px] object-cover lg:h-110"
           src={bannerImages[currentBanner]}
           alt="غذاهای مجموعه غذایی نارنج"
         />

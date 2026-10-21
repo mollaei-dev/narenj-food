@@ -1,5 +1,6 @@
 import HomePage from "@/pages/HomePage";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <main className="mt-20">
         <HomePage />
       </main>
+      <Footer/>
     </div>
   );
 }

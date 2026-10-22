@@ -1,75 +1,86 @@
-# React + TypeScript + Vite
+# Narenj Food
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About The Project
 
-Currently, two official plugins are available:
+Narenj Food is a restaurant website built with React, TypeScript, and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The website is designed for a single restaurant and includes a home page with food categories, popular dishes, and restaurant information.
 
-## React Compiler
+The project uses a Persian RTL layout and a dark theme with orange accents.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project is responsive and is currently under development.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive design
+- Reusable React components
+- Hero image slider
+- Food categories
+- Popular foods 
+- Restaurant information section
+- Client-side routing with React Router
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Pages
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Home Page
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The home page introduces the restaurant and displays food categories, popular dishes, and restaurant information.
 
+### Menu Page
+
+A dedicated page for the restaurant's food menu.
+
+### Cart Page
+
+A dedicated page for the shopping cart.
+
+### Not Found Page
+
+This page is shown when the user visits an unknown URL.
+
+## Technologies
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- React Icons
+
+## Project Structure
+
+```text
+src/
+├── assets/
+│   ├── icons/
+│   └── images/
+├── components/
+├── pages/
+│   ├── HomePage.tsx
+│   ├── MenuPage.tsx
+│   ├── CartPage.tsx
+│   └── NotFoundPage.tsx
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Install dependencies
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+### Run the project
+
+```bash
+npm run dev
+```
+
+The project will run with Vite.
+
+## Notes
+
+This project is being developed as a front-end portfolio project to practice React, TypeScript, and Tailwind CSS. Additional pages and functionality will be implemented incrementally.

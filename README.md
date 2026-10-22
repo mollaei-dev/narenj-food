@@ -10,6 +10,10 @@ The project uses a Persian RTL layout and a dark theme with orange accents.
 
 The project is responsive and is currently under development.
 
+## Live Demo
+
+[View Live Demo](https://mollaei-dev.github.io/narenj-food/)
+
 ## Features
 
 - Responsive design

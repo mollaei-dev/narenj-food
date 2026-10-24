@@ -5,16 +5,16 @@ function MainNavigation() {
     <nav>
       <ul className="hidden gap-4 text-[18px] md:flex">
         <li>
-          <a href="#">صفحه اصلی</a>
+          <Link to="/">صفحه اصلی</Link>
         </li>
         <li>
           <Link to="/menu">منو</Link>
         </li>
         <li>
-          <a href="#">درباره نارنج</a>
+          <Link to="/#about">درباره نارنج</Link>
         </li>
         <li>
-          <a href="#">تماس با ما</a>
+          <Link to="/#contact">تماس با ما</Link>
         </li>
       </ul>
     </nav>

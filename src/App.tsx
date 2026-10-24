@@ -5,10 +5,12 @@ import { Routes, Route } from "react-router";
 import MenuPage from "./pages/MenuPage";
 import CartPage from "./pages/CartPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen px-3 sm:px-7 md:px-10 xl:px-15 2xl:px-20">
+    <div className="flex min-h-screen flex-col px-3 sm:px-7 md:px-10 xl:px-15 2xl:px-20">
+      <ScrollToHash />
       <Header />
       <main className="mt-20 flex-1">
         <Routes>

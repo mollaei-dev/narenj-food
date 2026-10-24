@@ -51,7 +51,10 @@ const circles = [
 ];
 function AboutSection() {
   return (
-    <section className="flex w-full flex-col-reverse gap-15 py-14 lg:flex-row lg:gap-3">
+    <section
+      id="about"
+      className="flex w-full scroll-mt-24 flex-col-reverse gap-15 py-14 lg:flex-row lg:gap-3"
+    >
       <div className="flex h-full w-full flex-col lg:w-1/2 2xl:gap-10">
         <h2 className="mb-10 w-45 border-r-4 border-[#FF6D00] py-2 pr-4 text-right text-2xl font-bold text-[#F5F1EB]">
           درباره نارنج :

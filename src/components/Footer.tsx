@@ -3,7 +3,7 @@ import { FaInstagram, FaPhone } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="relative w-full">
+    <footer id="contact" className="relative w-full">
       <svg
         className="-mb-1 block h-30 w-full sm:h-50"
         preserveAspectRatio="none"

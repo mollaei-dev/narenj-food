@@ -2,6 +2,7 @@ import banner1 from "@/assets/images/banners/banner1.jpg";
 import banner2 from "@/assets/images/banners/banner2.jpg";
 import banner3 from "@/assets/images/banners/banner3.jpg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 const bannerImages = [banner1, banner2, banner3];
 
@@ -40,9 +41,12 @@ function HeroSection() {
           ))}
         </div>
 
-        <button className="cursor-pointer rounded-xl bg-[#FF6A00] px-4 py-2 font-bold text-[#F5F1EB] shadow-lg shadow-[#FF6A00]/20 transition-all duration-300 hover:-translate-x-1 hover:bg-[#FF6A00]/70 sm:px-6 sm:py-3">
+        <Link
+          to="/menu"
+          className="cursor-pointer rounded-xl bg-[#FF6A00] px-4 py-2 font-bold text-[#F5F1EB] shadow-lg shadow-[#FF6A00]/20 transition-all duration-300 hover:-translate-x-1 hover:bg-[#FF6A00]/70 sm:px-6 sm:py-3"
+        >
           مشاهده منو ←
-        </button>
+        </Link>
       </div>
 
       <div className="w-full min-[870px]:w-1/2">

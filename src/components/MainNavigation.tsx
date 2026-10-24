@@ -5,16 +5,24 @@ function MainNavigation() {
     <nav>
       <ul className="hidden gap-4 text-[18px] md:flex">
         <li>
-          <Link to="/">صفحه اصلی</Link>
+          <Link to="/" className="hover:text-[#FF6D00]">
+            صفحه اصلی
+          </Link>
         </li>
         <li>
-          <Link to="/menu">منو</Link>
+          <Link to="/menu" className="hover:text-[#FF6D00]">
+            منو
+          </Link>
         </li>
         <li>
-          <Link to="/#about">درباره نارنج</Link>
+          <Link to="/#about" className="hover:text-[#FF6D00]">
+            درباره نارنج
+          </Link>
         </li>
         <li>
-          <Link to="/#contact">تماس با ما</Link>
+          <Link to="/#contact" className="hover:text-[#FF6D00]">
+            تماس با ما
+          </Link>
         </li>
       </ul>
     </nav>

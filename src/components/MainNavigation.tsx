@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function MainNavigation() {
   return (
     <nav>
@@ -6,7 +8,7 @@ function MainNavigation() {
           <a href="#">صفحه اصلی</a>
         </li>
         <li>
-          <a href="#">منو</a>
+          <Link to="/menu">منو</Link>
         </li>
         <li>
           <a href="#">درباره نارنج</a>

@@ -11,7 +11,7 @@ function MainNavigation() {
     <nav>
       <ul className="flex flex-col gap-4 text-[18px] md:flex-row">
         {navLinks.map((link) => (
-          <li>
+          <li key={link.to}>
             <Link to={link.to} className="hover:text-[#FF6D00]">
               {link.title}
             </Link>

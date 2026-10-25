@@ -9,6 +9,7 @@ function MenuPage() {
       <div className="flex gap-4">
         {categories.map((category) => (
           <Link
+            key={category.id}
             to={`#${category.id}`}
             className="mb-15 flex h-15 w-30 items-center justify-center rounded-full bg-[#353537a8] hover:bg-[#FF6D00] hover:text-[#000000]"
           >
@@ -17,20 +18,26 @@ function MenuPage() {
         ))}
       </div>
       {categories.map((category) => (
-        <section id={category.id} className="w-full py-14 scroll-mt-24">
+        <section
+          key={category.id}
+          id={category.id}
+          className="w-full scroll-mt-24 py-14"
+        >
           <h2 className="mb-10 w-45 border-r-4 border-[#FF6D00] py-2 pr-4 text-right text-2xl font-bold text-[#F5F1EB]">
             {category.title}
           </h2>
           <div className="grid grid-cols-1 justify-items-center gap-4 min-[570px]:grid-cols-2 min-[900px]:grid-cols-3 xl:gap-6 2xl:grid-cols-6">
-            {foods.filter((food)=> food.category === category.id).map((food) => (
-              <FoodCard
-                key={food.id}
-                title={food.name}
-                description={food.description}
-                price={food.price}
-                image={food.image}
-              />
-            ))}
+            {foods
+              .filter((food) => food.category === category.id)
+              .map((food) => (
+                <FoodCard
+                  key={food.id}
+                  title={food.name}
+                  description={food.description}
+                  price={food.price}
+                  image={food.image}
+                />
+              ))}
           </div>
         </section>
       ))}

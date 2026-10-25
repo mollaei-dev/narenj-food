@@ -68,7 +68,7 @@ export const foods = [
     name: "خورشت قیمه",
     price: 270000,
     description: "خورشت قیمه همراه سیب‌زمینی سرخ‌شده و عطر لیموعمانی",
-    image: "images/menu/iranian-food/gh一imeh.jpg",
+    image: "images/menu/iranian-food/gheymeh.jpg",
     category: "iranian-food",
     isPopular: false,
   },

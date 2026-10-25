@@ -1,44 +1,5 @@
 import CategoryCard from "./CategoryCard";
-import iranianFood from "@/assets/images/food-categories/iranian-food.jpg";
-import traditionalFood from "@/assets/images/food-categories/traditional-food.jpg";
-import fastFood from "@/assets/images/food-categories/fast-food.jpg";
-import drink from "@/assets/images/food-categories/drink.jpg";
-import healthyFood from "@/assets/images/food-categories/healthy-food.jpg";
-import dessert from "@/assets/images/food-categories/dessert.jpg";
-
-const categories = [
-  {
-    title: "غذاهای ایرانی",
-    description: "طعمی اصیل باعطر برنج ایرانی",
-    image: iranianFood,
-  },
-  {
-    title: "فست‌ فود",
-    description: "انتخابی خوشمزه برای وقت‌هایی که هوسش را داری",
-    image: fastFood,
-  },
-  {
-    title: "غذاهای سنتی",
-    description: "مزه‌های سنتی و محلی، گرم و دلچسب",
-    image: traditionalFood,
-  },
-
-  {
-    title: "نوشیدنی‌ها",
-    description: "یک انتخاب خنک و دلچسب",
-    image: drink,
-  },
-  {
-    title: "غذاهای رژیمی",
-    description: "انتخابی سبک و سالم برای روزهایی که به فکر تغذیه‌ات هستی",
-    image: healthyFood,
-  },
-  {
-    title: "دسر و پیش غذا",
-    description: "شروع و پایانی خوشمزه",
-    image: dessert,
-  },
-];
+import { categories } from "@/data/categories";
 
 function FoodCategories() {
   return (

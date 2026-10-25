@@ -15,6 +15,7 @@ function FoodCategories() {
             description={category.description}
             image={category.image}
             reverse={index % 2 === 0}
+            categoryId={category.id}
           />
         ))}
       </div>

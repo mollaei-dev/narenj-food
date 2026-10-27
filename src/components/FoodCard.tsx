@@ -7,8 +7,8 @@ type FoodCardProps  = {
 };
 function FoodCard({ title, description, price, image }: FoodCardProps ) {
   return (
-    <article className="flex flex-col gap-4 min-w-70  overflow-hidden hover:-translate-y-1 rounded-4xl border-3 border-[#47474a] pb-4 duration-200 hover:border-[#6e3b14]">
-      <img alt={title}  src={`${import.meta.env.BASE_URL}${image}`} className="h-50 w-70 object-cover"
+    <article className="flex flex-col gap-4 min-w-50 max-w-70 w-full  overflow-hidden hover:-translate-y-1 rounded-4xl border-3 border-[#47474a] pb-4 duration-200 hover:border-[#6e3b14]">
+      <img alt={title}  src={`${import.meta.env.BASE_URL}${image}`} className="max-h-60 min-[375px]:h-50   w-full  object-cover object-center  "
  />
       <div className="flex flex-col gap-3 px-4">
         <div className="h-15">

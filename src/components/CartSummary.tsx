@@ -44,7 +44,7 @@ function CartSummary() {
 
         <button
           type="button"
-          className="mt-5 w-full rounded-xl bg-[#FF6D00] py-3 font-bold text-black transition-colors duration-200 hover:bg-[#ff8126]"
+          className="mt-5 w-full rounded-xl cursor-pointer bg-[#FF6D00] py-3 font-bold text-black transition-colors duration-200 hover:bg-[#ff8126]"
         >
           ادامه خرید و پرداخت
         </button>

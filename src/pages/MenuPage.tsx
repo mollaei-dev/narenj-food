@@ -7,12 +7,12 @@ import CartSummary from "@/components/CartSummary";
 function MenuPage() {
   return (
     <div>
-      <nav className="fixed top-22 right-3 sm:right-7 md:right-10  xl:right-15 2xl:right-20 z-49 flex h-24 w-full gap-1 md:gap-4 bg-[#1A1919] py-6">
+      <nav className="fixed top-22 right-3 z-49 hidden h-24 gap-1 bg-[#1A1919] py-6 sm:right-7 sm:flex md:right-10 md:gap-4 xl:right-15 2xl:right-20">
         {categories.map((category) => (
           <Link
             key={category.id}
             to={`#${category.id}`}
-            className="mb-15 flex h-15 min-[890px]: w-30 min-[890px]:w-30 items-center justify-center rounded-full bg-[#353537a8] hover:bg-[#FF6D00] hover:text-[#000000]"
+            className="flex h-13 shrink-0 items-center justify-center rounded-full bg-[#353537a8] px-2 text-sm hover:bg-[#FF6D00] hover:text-black min-[890px]:h-15 min-[890px]:w-30 min-[890px]:text-base"
           >
             {category.title}
           </Link>

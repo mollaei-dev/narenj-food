@@ -1,24 +1,34 @@
 import { FaMotorcycle } from "react-icons/fa";
-
-function CartSummary() {
+type CartSummaryProps = {
+  variant?: "default" | "horizontal";
+};
+function CartSummary({ variant }: CartSummaryProps) {
   const totalPrice = 500000;
   const deliveryFee = totalPrice >= 1000000 ? 0 : 80000;
   const finalPrice = totalPrice + deliveryFee;
 
   return (
     <div className="flex min-h-150 w-full flex-col gap-5 rounded-2xl border border-[#3A3939] bg-[#222121] p-5">
-      <h2 className="mb-5 border-b border-[#3A3939] py-6 text-xl font-bold text-[#FF6D00]">
+      <h2
+        className={`mb-5 border-b border-[#3A3939] py-6 ${variant === "horizontal" ? "text-xl sm:text-2xl" : "text-xl"} font-bold text-[#FF6D00]`}
+      >
         خلاصه سفارش
       </h2>
-      <div>
-        <div className="mb-4 flex items-center justify-between text-sm">
+      <div
+        className={
+          variant === "horizontal"
+            ? "text-base min-[400px]:text-lg sm:text-xl"
+            : "text-sm"
+        }
+      >
+        <div className="mb-4 flex items-center justify-between">
           <span className="text-[#B8B5B0]">جمع کل آیتم‌ها</span>
           <span className="font-medium">
             {totalPrice.toLocaleString("fa-IR")} تومان
           </span>
         </div>
 
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between">
           <span className="text-[#B8B5B0]">هزینه ارسال</span>
           <span
             className={deliveryFee === 0 ? "text-[16px] text-[#FF6D00]" : ""}
@@ -29,22 +39,23 @@ function CartSummary() {
           </span>
         </div>
         <p className="mt-8 text-[#B8B5B0]">
-          🎉 با خرید ۱,۰۰۰,۰۰۰ تومان، از
-          ارسال رایگان بهره‌مند شوید.
+          🎉 با خرید ۱,۰۰۰,۰۰۰ تومان، از ارسال رایگان بهره‌مند شوید.
         </p>
       </div>
 
-      <div>
+      <div className={variant === "horizontal" ? "text-base sm:text-xl" : ""}>
         <div className="mb-5 flex items-center justify-between border-t border-[#3A3939] pt-5">
           <span className="font-bold">مبلغ نهایی</span>
-          <span className="text-lg font-bold text-[#FF6D00]">
+          <span
+            className={`${variant === "horizontal" ? "text-xl" : "text-lg"} font-bold text-[#FF6D00]`}
+          >
             {finalPrice.toLocaleString("fa-IR")} تومان
           </span>
         </div>
 
         <button
           type="button"
-          className="mt-5 w-full rounded-xl cursor-pointer bg-[#FF6D00] py-3 font-bold text-black transition-colors duration-200 hover:bg-[#ff8126]"
+          className="mt-5 w-full cursor-pointer rounded-xl bg-[#FF6D00] py-3 font-bold text-black transition-colors duration-200 hover:bg-[#ff8126]"
         >
           ادامه خرید و پرداخت
         </button>

@@ -7,7 +7,7 @@ import CartSummary from "@/components/CartSummary";
 function MenuPage() {
   return (
     <div>
-      <nav className="fixed top-22 right-3 z-49 hidden h-24 gap-1 bg-[#1A1919] py-6 sm:right-7 sm:flex md:right-10 md:gap-4 xl:right-15 2xl:right-20">
+      <nav className="fixed top-16 md:top-22 w-full right-3 z-49 hidden h-26 gap-1 bg-[#1A1919] py-6 sm:right-7 sm:flex md:right-10 md:gap-4 xl:right-15 2xl:right-20">
         {categories.map((category) => (
           <Link
             key={category.id}

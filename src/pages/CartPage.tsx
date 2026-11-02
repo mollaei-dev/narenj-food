@@ -31,7 +31,7 @@ function CartPage() {
             ))}
         </div>
         <aside className="lg:fixed lg:top-52 lg:left-10 lg:w-97 xl:top-64 xl:left-15 xl:w-105 2xl:left-20 2xl:w-120">
-          <CartSummary variant="horizontal" />
+          <CartSummary variant="large" />
         </aside>
       </div>
     </div>

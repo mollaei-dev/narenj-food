@@ -1,8 +1,8 @@
 import { FaMotorcycle } from "react-icons/fa";
 type CartSummaryProps = {
-  variant?: "default" | "horizontal";
+  variant?: "default" | "large";
 };
-function CartSummary({ variant }: CartSummaryProps) {
+function CartSummary({ variant = "default" }: CartSummaryProps) {
   const totalPrice = 500000;
   const deliveryFee = totalPrice >= 1000000 ? 0 : 80000;
   const finalPrice = totalPrice + deliveryFee;
@@ -11,14 +11,14 @@ function CartSummary({ variant }: CartSummaryProps) {
     <div className="flex min-h-150 w-full flex-col gap-5 rounded-2xl border border-[#3A3939] bg-[#222121] p-5">
       <h2
         className={`mb-5 border-b border-[#3A3939] py-6 text-xl ${
-          variant === "horizontal" ? "sm:text-2xl" : ""
+          variant === "large" ? "sm:text-2xl" : ""
         } font-bold text-[#FF6D00]`}
       >
         خلاصه سفارش
       </h2>
       <div
         className={
-          variant === "horizontal"
+          variant === "large"
             ? "text-base min-[400px]:text-lg sm:text-xl"
             : "text-sm"
         }
@@ -45,11 +45,11 @@ function CartSummary({ variant }: CartSummaryProps) {
         </p>
       </div>
 
-      <div className={variant === "horizontal" ? "text-base sm:text-xl" : ""}>
+      <div className={variant === "large" ? "text-base sm:text-xl" : ""}>
         <div className="mb-5 flex items-center justify-between border-t border-[#3A3939] pt-5">
           <span className="font-bold">مبلغ نهایی</span>
           <span
-            className={`${variant === "horizontal" ? "text-xl" : "text-lg"} font-bold text-[#FF6D00]`}
+            className={`${variant === "large" ? "text-xl" : "text-lg"} font-bold text-[#FF6D00]`}
           >
             {finalPrice.toLocaleString("fa-IR")} تومان
           </span>

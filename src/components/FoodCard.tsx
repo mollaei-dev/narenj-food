@@ -15,10 +15,10 @@ function FoodCard({
 }: FoodCardProps) {
   return (
     <article
-      className={`flex w-full max-w-70 flex-col ${
+      className={`flex w-full max-w-70 flex-col pb-4 ${
         variant === "horizontal"
-          ? "w-full rounded-2xl border border-[#3A3939] bg-[#222121] px-0 pb-4 min-[577px]:max-w-full min-[577px]:flex-row min-[577px]:px-4 min-[577px]:py-8 2xl:px-8"
-          : "rounded-4xl border-3 border-[#47474a] pb-4 duration-200 hover:-translate-y-1 hover:border-[#6e3b14]"
+          ? "rounded-2xl border border-[#3A3939] bg-[#222121] px-0 min-[577px]:max-w-full min-[577px]:flex-row min-[577px]:px-4 min-[577px]:py-8 2xl:px-8"
+          : "rounded-4xl border-3 border-[#47474a] duration-200 hover:-translate-y-1 hover:border-[#6e3b14]"
       } gap-4 overflow-hidden`}
     >
       <img
@@ -31,10 +31,10 @@ function FoodCard({
         } object-cover object-center`}
       />
       <div
-        className={`flex ${
+        className={`flex flex-col ${
           variant === "horizontal"
-            ? "w-full flex-col items-center justify-between min-[577px]:flex-row 2xl:px-10"
-            : "flex-col"
+            ? "w-full items-center justify-between min-[577px]:flex-row 2xl:px-10"
+            : ""
         } gap-3 px-4`}
       >
         <div className="h-15">
@@ -46,7 +46,7 @@ function FoodCard({
             {title}
           </h3>
           <p
-            className={` ${
+            className={`${
               variant === "horizontal" ? "lg:text-base 2xl:text-xl" : "text-sm"
             } text-[#A7A7B0]`}
           >
@@ -54,9 +54,9 @@ function FoodCard({
           </p>
         </div>
         <div
-          className={`flex items-center gap-5 ${
+          className={`flex items-center justify-between gap-5 ${
             variant === "horizontal"
-              ? "mt-5 w-full justify-between min-[577px]:mt-0 min-[577px]:w-auto min-[577px]:flex-col-reverse"
+              ? "mt-5 w-full min-[577px]:mt-0 min-[577px]:w-auto min-[577px]:flex-col-reverse"
               : "mt-4"
           } `}
         >

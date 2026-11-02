@@ -10,7 +10,9 @@ function CartSummary({ variant }: CartSummaryProps) {
   return (
     <div className="flex min-h-150 w-full flex-col gap-5 rounded-2xl border border-[#3A3939] bg-[#222121] p-5">
       <h2
-        className={`mb-5 border-b border-[#3A3939] py-6 ${variant === "horizontal" ? "text-xl sm:text-2xl" : "text-xl"} font-bold text-[#FF6D00]`}
+        className={`mb-5 border-b border-[#3A3939] py-6 text-xl ${
+          variant === "horizontal" ? "sm:text-2xl" : ""
+        } font-bold text-[#FF6D00]`}
       >
         خلاصه سفارش
       </h2>

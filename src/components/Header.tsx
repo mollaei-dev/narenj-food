@@ -2,6 +2,8 @@ import logo from "@/assets/icons/logo.jpg";
 import MainNavigation from "./MainNavigation";
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
+import { FaCartShopping } from "react-icons/fa6";
+import { Link } from "react-router";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,11 +21,13 @@ function Header() {
           src={logo}
           alt="لوگوی نارنج"
         />
-        {}
         <div className="hidden md:flex">
           <MainNavigation />
         </div>
         <div className="flex gap-4">
+          <Link to="/cart">
+            <FaCartShopping className="text-4xl text-[#FF6D00] md:text-[40px] hover:scale-115 transition-transform duration-200" />
+          </Link>
           <button className="flex h-8 w-20 cursor-pointer items-center justify-center rounded-lg bg-[#FF6D00] md:h-10">
             ثبت نام
           </button>

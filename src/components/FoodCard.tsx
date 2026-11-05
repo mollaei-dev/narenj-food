@@ -16,6 +16,7 @@ function FoodCard({
   image,
   variant = "default",
 }: FoodCardProps) {
+  const addToCart = useCartStore((state) => state.addToCart);
   return (
     <article
       className={`flex w-full max-w-70 flex-col pb-4 ${
@@ -64,6 +65,15 @@ function FoodCard({
           } `}
         >
           <button
+            onClick={() =>
+              addToCart({
+                id: foodID,
+                name: title,
+                price: price,
+                description: description,
+                image: image,
+              })
+            }
             className="h-8 w-8 cursor-pointer rounded-full bg-[#FF6D00] px-2 text-black transition-transform duration-200 hover:scale-135"
             type="button"
             aria-label={`افزودن ${title} به سبد خرید`}

@@ -1,5 +1,7 @@
+import { useCartStore } from "@/store/cartStore";
 import { FaShoppingCart } from "react-icons/fa";
 type FoodCardProps = {
+  foodID: number;
   title: string;
   description: string;
   price: number;
@@ -7,6 +9,7 @@ type FoodCardProps = {
   variant?: "default" | "horizontal";
 };
 function FoodCard({
+  foodID,
   title,
   description,
   price,

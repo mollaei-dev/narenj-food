@@ -38,6 +38,7 @@ function MenuPage() {
                   .map((food) => (
                     <FoodCard
                       key={food.id}
+                      foodID = {food.id}
                       title={food.name}
                       description={food.description}
                       price={food.price}

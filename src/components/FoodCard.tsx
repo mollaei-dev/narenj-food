@@ -20,6 +20,7 @@ function FoodCard({
   const cart = useCartStore((state) => state.cart);
   const isFoodInCart = cart.find((item) => item.id === foodID);
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   return (
     <article
       className={`flex w-full max-w-70 flex-col pb-4 ${
@@ -73,7 +74,7 @@ function FoodCard({
                 className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
                 type="button"
                 aria-label="افزایش تعداد"
-                onClick={()=>increaseQuantity(foodID)}
+                onClick={() => increaseQuantity(foodID)}
               >
                 <FaPlus />
               </button>
@@ -84,7 +85,7 @@ function FoodCard({
                 className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
                 type="button"
                 aria-label="کاهش تعداد"
-               
+                onClick={() => decreaseQuantity(foodID)}
               >
                 <FaMinus />
               </button>

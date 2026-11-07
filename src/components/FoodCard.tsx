@@ -19,6 +19,7 @@ function FoodCard({
   const addToCart = useCartStore((state) => state.addToCart);
   const cart = useCartStore((state) => state.cart);
   const isFoodInCart = cart.find((item) => item.id === foodID);
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   return (
     <article
       className={`flex w-full max-w-70 flex-col pb-4 ${
@@ -72,14 +73,18 @@ function FoodCard({
                 className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
                 type="button"
                 aria-label="افزایش تعداد"
+                onClick={()=>increaseQuantity(foodID)}
               >
                 <FaPlus />
               </button>
-              <span className="text-xl font-extrabold">{isFoodInCart.quantity.toLocaleString("fa-IR")}</span>
+              <span className="text-xl font-extrabold">
+                {isFoodInCart.quantity.toLocaleString("fa-IR")}
+              </span>
               <button
                 className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
                 type="button"
                 aria-label="کاهش تعداد"
+               
               >
                 <FaMinus />
               </button>
@@ -93,7 +98,7 @@ function FoodCard({
                   price: price,
                   description: description,
                   image: image,
-                  quantity: 1
+                  quantity: 1,
                 })
               }
               className="h-8 w-8 cursor-pointer rounded-full bg-[#FF6D00] px-2 text-black transition-transform duration-200 hover:scale-135"

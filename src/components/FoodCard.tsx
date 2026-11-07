@@ -1,5 +1,5 @@
 import { useCartStore } from "@/store/cartStore";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaPlus, FaMinus } from "react-icons/fa";
 type FoodCardProps = {
   foodID: number;
   title: string;
@@ -17,6 +17,8 @@ function FoodCard({
   variant = "default",
 }: FoodCardProps) {
   const addToCart = useCartStore((state) => state.addToCart);
+  const cart = useCartStore((state) => state.cart);
+  const isFoodInCart = cart.find((item) => item.id === foodID);
   return (
     <article
       className={`flex w-full max-w-70 flex-col pb-4 ${
@@ -64,22 +66,43 @@ function FoodCard({
               : "mt-4"
           } `}
         >
-          <button
-            onClick={() =>
-              addToCart({
-                id: foodID,
-                name: title,
-                price: price,
-                description: description,
-                image: image,
-              })
-            }
-            className="h-8 w-8 cursor-pointer rounded-full bg-[#FF6D00] px-2 text-black transition-transform duration-200 hover:scale-135"
-            type="button"
-            aria-label={`افزودن ${title} به سبد خرید`}
-          >
-            <FaShoppingCart />
-          </button>
+          {isFoodInCart ? (
+            <div className="flex gap-2 rounded-2xl bg-[#FF6D00] p-1 text-black">
+              <button
+                className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
+                type="button"
+                aria-label="افزایش تعداد"
+              >
+                <FaPlus />
+              </button>
+              <span className="text-xl font-extrabold">{isFoodInCart.quantity.toLocaleString("fa-IR")}</span>
+              <button
+                className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
+                type="button"
+                aria-label="کاهش تعداد"
+              >
+                <FaMinus />
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() =>
+                addToCart({
+                  id: foodID,
+                  name: title,
+                  price: price,
+                  description: description,
+                  image: image,
+                  quantity: 1
+                })
+              }
+              className="h-8 w-8 cursor-pointer rounded-full bg-[#FF6D00] px-2 text-black transition-transform duration-200 hover:scale-135"
+              type="button"
+              aria-label={`افزودن ${title} به سبد خرید`}
+            >
+              <FaShoppingCart />
+            </button>
+          )}
           <div
             className={`flex gap-1 ${variant === "horizontal" ? "2xl:text-xl" : ""} font-bold text-[#FF6D00]`}
           >

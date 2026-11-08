@@ -14,8 +14,8 @@ function CartPage() {
         </div>
         <div className="mt-7 flex w-full min-w-0 flex-col items-center gap-5 pl-0 sm:items-stretch lg:pl-101 xl:pl-110 2xl:pl-130">
           {cart.length === 0 ? (
-            <div className="rounded-2xl w-full border border-[#3A3939] bg-[#222121] p-5">
-              <p className="py-10 text-center text-xl sm:text-2xl font-bold text-[#FF6D00]">
+            <div className="w-full rounded-2xl border border-[#3A3939] bg-[#222121] p-5">
+              <p className="py-10 text-center text-xl font-bold text-[#FF6D00] sm:text-2xl">
                 هنوز غذایی به سبد خرید اضافه نکرده‌اید !
               </p>
             </div>

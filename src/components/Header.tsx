@@ -4,9 +4,12 @@ import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router";
+import { useCartStore } from "@/store/cartStore";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const cart = useCartStore((state) => state.cart);
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#6c6c6c] bg-[#1A1919] px-3 py-4 sm:px-7 md:px-10 xl:px-15 2xl:px-20">
       <div className="flex items-center justify-between">
@@ -25,8 +28,13 @@ function Header() {
           <MainNavigation />
         </div>
         <div className="flex gap-4">
-          <Link to="/cart">
-            <FaCartShopping className="text-4xl text-[#FF6D00] md:text-[40px] hover:scale-115 transition-transform duration-200" />
+          <Link to="/cart" className="relative">
+            <FaCartShopping className="text-4xl text-[#FF6D00] transition-transform duration-200 hover:scale-115 md:text-[40px]" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-4 px-1 text-sm font-extrabold text-[#FF6D00]">
+                {cartCount.toLocaleString("fa-IR")}
+              </span>
+            )}
           </Link>
           <button className="flex h-8 w-20 cursor-pointer items-center justify-center rounded-lg bg-[#FF6D00] md:h-10">
             ثبت نام

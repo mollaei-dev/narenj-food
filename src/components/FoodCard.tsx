@@ -18,7 +18,7 @@ function FoodCard({
 }: FoodCardProps) {
   const addToCart = useCartStore((state) => state.addToCart);
   const cart = useCartStore((state) => state.cart);
-  const isFoodInCart = cart.find((item) => item.id === foodID);
+  const existingFood = cart.find((item) => item.id === foodID);
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   return (
@@ -68,7 +68,7 @@ function FoodCard({
               : "mt-4"
           } `}
         >
-          {isFoodInCart ? (
+          {existingFood ? (
             <div className="flex gap-2 rounded-2xl bg-[#FF6D00] p-1 text-black">
               <button
                 className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"
@@ -78,8 +78,8 @@ function FoodCard({
               >
                 <FaPlus />
               </button>
-              <span className="text-xl font-extrabold">
-                {isFoodInCart.quantity.toLocaleString("fa-IR")}
+              <span className="font-extrabold">
+                {existingFood.quantity.toLocaleString("fa-IR")}
               </span>
               <button
                 className="cursor-pointer px-2 py-1 transition-transform duration-200 hover:scale-140"

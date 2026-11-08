@@ -15,7 +15,7 @@ type CartStore = {
   decreaseQuantity: (foodID: number) => void;
 };
 export const useCartStore = create<CartStore>((set) => ({
-  cart: [],
+  cart: JSON.parse(localStorage.getItem("cart") || "[]"),
   addToCart: (food) => set((state) => ({ cart: [...state.cart, food] })),
   increaseQuantity: (foodID) =>
     set((state) => ({
@@ -35,3 +35,6 @@ export const useCartStore = create<CartStore>((set) => ({
         .filter((item) => item.quantity > 0),
     })),
 }));
+useCartStore.subscribe((state) => {
+  localStorage.setItem("cart", JSON.stringify(state.cart));
+});

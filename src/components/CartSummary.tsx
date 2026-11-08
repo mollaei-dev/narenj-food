@@ -1,12 +1,16 @@
+import { useCartStore } from "@/store/cartStore";
 import { FaMotorcycle } from "react-icons/fa";
 type CartSummaryProps = {
   variant?: "default" | "large";
 };
 function CartSummary({ variant = "default" }: CartSummaryProps) {
-  const totalPrice = 500000;
-  const deliveryFee = totalPrice >= 1000000 ? 0 : 80000;
+  const cart = useCartStore((state) => state.cart);
+  const totalPrice = cart.reduce(
+    (total, item) => total + item.quantity * item.price,
+    0,
+  );
+  const deliveryFee = totalPrice === 0 || totalPrice >= 1000000 ? 0 : 80000;
   const finalPrice = totalPrice + deliveryFee;
-
   return (
     <div className="flex min-h-150 w-full flex-col gap-5 rounded-2xl border border-[#3A3939] bg-[#222121] p-5">
       <h2
@@ -33,9 +37,11 @@ function CartSummary({ variant = "default" }: CartSummaryProps) {
         <div className="flex items-center justify-between">
           <span className="text-[#B8B5B0]">هزینه ارسال</span>
           <span
-            className={deliveryFee === 0 ? "text-[16px] text-[#FF6D00]" : ""}
+            className={
+              totalPrice >= 1000000 ? "text-[16px] text-[#FF6D00]" : ""
+            }
           >
-            {deliveryFee === 0
+            {totalPrice >= 1000000
               ? "رایگان"
               : `${deliveryFee.toLocaleString("fa-IR")} تومان`}
           </span>
